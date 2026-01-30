@@ -11,7 +11,8 @@ public class ModItems {
 
     public static final DeferredItem<Item> CALCULATOR = ITEMS.register("calculator",
             () -> new Item(new Item.Properties()));
-
+    public static final DeferredItem<Item> RUBIX_CUBE = ITEMS.register("rubix_cube",
+            () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {

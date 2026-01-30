@@ -1,3 +1,7 @@
 {
-  "item.improvedsmelting.calculator": "Calculator"
+  "item.improvedsmelting.calculator": "Calculator",
+  "item.improvedsmelting.rubix_cube": "Rubix Cube",
+
+  "block.improvedsmelting.cheese_ore": "Cheese Ore",
+  "block.improvedsmelting.australia_map": "Australia"
 }

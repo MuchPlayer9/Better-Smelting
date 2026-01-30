@@ -1,6 +1,7 @@
 package net.mp9.smelterizing;
 
 import net.minecraft.world.item.CreativeModeTabs;
+import net.mp9.smelterizing.block.ModBlocks;
 import net.mp9.smelterizing.item.ModItems;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -37,6 +38,7 @@ public class BetterSmelting {
         NeoForge.EVENT_BUS.register(this);
 
         ModItems.register(modEventBus);
+        ModBlocks.register(modEventBus);
 
         // Register the item to a creative tab
         modEventBus.addListener(this::addCreative);
@@ -52,6 +54,12 @@ public class BetterSmelting {
     private void addCreative(BuildCreativeModeTabContentsEvent event) {
         if(event.getTabKey() == CreativeModeTabs.INGREDIENTS) {
             event.accept(ModItems.CALCULATOR);
+            event.accept(ModItems.RUBIX_CUBE);
+        }
+
+        if(event.getTabKey() == CreativeModeTabs.BUILDING_BLOCKS) {
+            event.accept(ModBlocks.CHEESE_ORE);
+            event.accept(ModBlocks.AUSTRALIA_MAP);
         }
     }
 
