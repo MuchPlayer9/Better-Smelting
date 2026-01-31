@@ -2,6 +2,7 @@ package net.mp9.smelterizing;
 
 import net.minecraft.world.item.CreativeModeTabs;
 import net.mp9.smelterizing.block.ModBlocks;
+import net.mp9.smelterizing.item.ModCreativeModsTabs;
 import net.mp9.smelterizing.item.ModItems;
 import net.neoforged.api.distmarker.Dist;
 import net.neoforged.fml.common.EventBusSubscriber;
@@ -36,6 +37,8 @@ public class BetterSmelting {
         // Note that this is necessary if and only if we want *this* class (ExampleMod) to respond directly to events.
         // Do not add this line if there are no @SubscribeEvent-annotated functions in this class, like onServerStarting() below.
         NeoForge.EVENT_BUS.register(this);
+
+        ModCreativeModsTabs.register(modEventBus);
 
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);

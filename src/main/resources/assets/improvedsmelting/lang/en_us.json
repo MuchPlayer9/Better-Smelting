@@ -3,5 +3,8 @@
   "item.improvedsmelting.rubix_cube": "Rubix Cube",
 
   "block.improvedsmelting.cheese_ore": "Cheese Ore",
-  "block.improvedsmelting.australia_map": "Australia"
+  "block.improvedsmelting.australia_map": "Australia",
+
+  "creativetab.bettersmelting.bettersmelting_blocks": "Better Smelting Blocks",
+  "creativetab.bettersmelting.bettersmelting_items": "Better Smelting Items"
 }
