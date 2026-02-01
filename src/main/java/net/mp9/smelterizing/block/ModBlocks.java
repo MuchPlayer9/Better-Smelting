@@ -25,7 +25,7 @@ public class ModBlocks {
                     BlockBehaviour.Properties.of().strength(4f).requiresCorrectToolForDrops().sound(SoundType.WET_SPONGE)));
     public static final DeferredBlock<Block> AUSTRALIA_MAP = registerBlock("australia_map",
             () -> new Block(BlockBehaviour.Properties.of()
-                    .strength(3f).requiresCorrectToolForDrops().sound(SoundType.SAND)));
+                    .strength(3f).sound(SoundType.SAND)));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
