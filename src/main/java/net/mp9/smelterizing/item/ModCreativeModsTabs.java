@@ -32,6 +32,8 @@ public class ModCreativeModsTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.RUBIX_CUBE);
                         output.accept(ModItems.CALCULATOR);
+                        output.accept(ModItems.CHEESE);
+                        output.accept(ModItems.RAW_CHEESE);
 
                     }).build());
 

@@ -13,6 +13,10 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> RUBIX_CUBE = ITEMS.register("rubix_cube",
             () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> RAW_CHEESE = ITEMS.register("raw_cheese",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> CHEESE = ITEMS.register("cheese",
+            () -> new Item(new Item.Properties()));
 
 
     public static void register(IEventBus eventBus) {
