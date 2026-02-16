@@ -34,6 +34,7 @@ public class ModCreativeModsTabs {
                         output.accept(ModItems.CALCULATOR);
                         output.accept(ModItems.CHEESE);
                         output.accept(ModItems.RAW_CHEESE);
+                        output.accept(ModItems.MIDAS);
 
                     }).build());
 

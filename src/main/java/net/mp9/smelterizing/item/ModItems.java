@@ -2,6 +2,7 @@ package net.mp9.smelterizing.item;
 
 import net.minecraft.world.item.Item;
 import net.mp9.smelterizing.BetterSmelting;
+import net.mp9.smelterizing.item.custom.MidasItem;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
 import net.neoforged.neoforge.registries.DeferredRegister;
@@ -18,6 +19,8 @@ public class ModItems {
     public static final DeferredItem<Item> CHEESE = ITEMS.register("cheese",
             () -> new Item(new Item.Properties()));
 
+    public static final DeferredItem<Item> MIDAS = ITEMS.register("midas",
+            () -> new MidasItem(new Item.Properties().durability(32)));
 
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
