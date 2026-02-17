@@ -20,17 +20,15 @@ public class ModItems {
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> CHEESE = ITEMS.register("cheese",
             () -> new Item(new Item.Properties()));
-
-    // food items
     public static final DeferredItem<Item> COCONUT_HUSK = ITEMS.register("coconut_husk",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> COCONUT = ITEMS.register("coconut",
             () -> new Item(new Item.Properties()));
-   //  public static final DeferredItem<Item> COCONUT_MILK = ITEMS.register("coconut_milk",
-          //  () -> new Item(new Item.Properties().food(ModFoodProperties.COCONUT_MILK)));
 
+    // food items
     public static final DeferredItem<Item> COCONUT_MILK =
-            ITEMS.register("coconut_milk", () -> new CoconutMilkItem(new Item.Properties().food(ModFoodProperties.COCONUT_MILK)));
+            ITEMS.register("coconut_milk", () -> new CoconutMilkItem(new Item.Properties()
+                    .food(ModFoodProperties.COCONUT_MILK).stacksTo(16)));
 
     // usable items
     public static final DeferredItem<Item> MIDAS = ITEMS.register("midas",
