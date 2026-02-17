@@ -39,6 +39,15 @@ public class ModCreativeModsTabs {
 
                     }).build());
 
+    public static final Supplier<CreativeModeTab> BETTER_SMELTING_FOOD_TAB = CREATIVE_MODE_TAB.register("better_smelting_food_tab",
+            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.COCONUT.get()))
+                    .title(Component.translatable("creativetab.bettersmelting.bettersmelting_food"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.COCONUT);
+                        output.accept(ModItems.COCONUT_MILK);
+                        output.accept(ModItems.COCONUT_HUSK);
+
+                    }).build());
 
     public static void register(IEventBus eventBus) {
         CREATIVE_MODE_TAB.register(eventBus);

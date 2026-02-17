@@ -1,17 +1,25 @@
 {
+  // items
   "item.improvedsmelting.calculator": "Calculator",
   "item.improvedsmelting.rubix_cube": "Rubix Cube",
   "item.improvedsmelting.raw_cheese": "Raw Cheese",
   "item.improvedsmelting.cheese": "Cheese",
 
+  // food
+  "item.improvedsmelting.coconut_milk": "Coconut Milk",
+  "item.improvedsmelting.coconut": "Coconut",
+  "item.improvedsmelting.coconut_husk": "Coconut Husk",
+
+  // usable items
   "item.improvedsmelting.midas": "Hand of Midas",
 
-
+  // blocks
   "block.improvedsmelting.cheese_ore": "Cheese Ore",
   "block.improvedsmelting.australia_map": "Australia",
   "block.improvedsmelting.midas_block": "Block of Midas",
 
-
+  // creative mode tabs
   "creativetab.bettersmelting.bettersmelting_blocks": "Better Smelting Blocks",
-  "creativetab.bettersmelting.bettersmelting_items": "Better Smelting Items"
+  "creativetab.bettersmelting.bettersmelting_items": "Better Smelting Items",
+  "creativetab.bettersmelting.bettersmelting_food": "Better Smelting Food"
 }

@@ -2,6 +2,7 @@ package net.mp9.smelterizing.item;
 
 import net.minecraft.world.item.Item;
 import net.mp9.smelterizing.BetterSmelting;
+import net.mp9.smelterizing.item.custom.CoconutMilkItem;
 import net.mp9.smelterizing.item.custom.MidasItem;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -10,6 +11,7 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(BetterSmelting.MOD_ID);
 
+    // items
     public static final DeferredItem<Item> CALCULATOR = ITEMS.register("calculator",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> RUBIX_CUBE = ITEMS.register("rubix_cube",
@@ -19,6 +21,18 @@ public class ModItems {
     public static final DeferredItem<Item> CHEESE = ITEMS.register("cheese",
             () -> new Item(new Item.Properties()));
 
+    // food items
+    public static final DeferredItem<Item> COCONUT_HUSK = ITEMS.register("coconut_husk",
+            () -> new Item(new Item.Properties()));
+    public static final DeferredItem<Item> COCONUT = ITEMS.register("coconut",
+            () -> new Item(new Item.Properties()));
+   //  public static final DeferredItem<Item> COCONUT_MILK = ITEMS.register("coconut_milk",
+          //  () -> new Item(new Item.Properties().food(ModFoodProperties.COCONUT_MILK)));
+
+    public static final DeferredItem<Item> COCONUT_MILK =
+            ITEMS.register("coconut_milk", () -> new CoconutMilkItem(new Item.Properties().food(ModFoodProperties.COCONUT_MILK)));
+
+    // usable items
     public static final DeferredItem<Item> MIDAS = ITEMS.register("midas",
             () -> new MidasItem(new Item.Properties().durability(32)));
 
