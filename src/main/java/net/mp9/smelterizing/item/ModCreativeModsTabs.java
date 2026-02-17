@@ -22,6 +22,7 @@ public class ModCreativeModsTabs {
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.CHEESE_ORE);
                         output.accept(ModBlocks.AUSTRALIA_MAP);
+                        output.accept(ModBlocks.MIDAS_BLOCK);
 
                     }).build());
 

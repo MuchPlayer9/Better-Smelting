@@ -9,6 +9,7 @@ import net.minecraft.world.level.block.DropExperienceBlock;
 import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.mp9.smelterizing.BetterSmelting;
+import net.mp9.smelterizing.block.custom.MidasBlock;
 import net.mp9.smelterizing.item.ModItems;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -26,6 +27,9 @@ public class ModBlocks {
     public static final DeferredBlock<Block> AUSTRALIA_MAP = registerBlock("australia_map",
             () -> new Block(BlockBehaviour.Properties.of()
                     .strength(3f).sound(SoundType.SAND)));
+
+    public static final DeferredBlock<Block> MIDAS_BLOCK = registerBlock("midas_block",
+            () -> new MidasBlock(BlockBehaviour.Properties.of().strength(2f).requiresCorrectToolForDrops()));
 
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {

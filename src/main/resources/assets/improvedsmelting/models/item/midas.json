@@ -2,5 +2,14 @@
   "parent": "minecraft:item/generated",
   "textures": {
     "layer0": "improvedsmelting:item/midas"
-  }
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "damage": 0.96
+
+      },
+      "model": "improvedsmelting:item/midas_broken"
+    }
+  ]
 }
