@@ -3,6 +3,7 @@ package net.mp9.smelterizing.item;
 import net.minecraft.world.item.Item;
 import net.mp9.smelterizing.BetterSmelting;
 import net.mp9.smelterizing.item.custom.CoconutMilkItem;
+import net.mp9.smelterizing.item.custom.FuelItem;
 import net.mp9.smelterizing.item.custom.MidasItem;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredItem;
@@ -10,6 +11,10 @@ import net.neoforged.neoforge.registries.DeferredRegister;
 
 public class ModItems {
     public static final DeferredRegister.Items ITEMS = DeferredRegister.createItems(BetterSmelting.MOD_ID);
+
+    // fuel items
+    public static final DeferredItem<Item> COCONUT_HUSK = ITEMS.register("coconut_husk",
+            () -> new FuelItem(new Item.Properties(), 200));
 
     // items
     public static final DeferredItem<Item> CALCULATOR = ITEMS.register("calculator",
@@ -19,8 +24,6 @@ public class ModItems {
     public static final DeferredItem<Item> RAW_CHEESE = ITEMS.register("raw_cheese",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> CHEESE = ITEMS.register("cheese",
-            () -> new Item(new Item.Properties()));
-    public static final DeferredItem<Item> COCONUT_HUSK = ITEMS.register("coconut_husk",
             () -> new Item(new Item.Properties()));
     public static final DeferredItem<Item> COCONUT = ITEMS.register("coconut",
             () -> new Item(new Item.Properties()));
