@@ -16,6 +16,7 @@ import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.BlockHitResult;
 import net.mp9.smelterizing.item.ModItems;
+import net.mp9.smelterizing.util.ModTags;
 
 import java.util.List;
 
@@ -34,13 +35,17 @@ public class MidasBlock extends Block {
     @Override
     public void stepOn(Level level, BlockPos pos, BlockState state, Entity entity) {
         if(entity instanceof ItemEntity itemEntity) {
-            if(itemEntity.getItem().getItem() == ModItems.MIDAS.get()) {
+            if(isValidItem(itemEntity.getItem())) {
                 itemEntity.setItem(new ItemStack(ModItems.MIDAS.get(), itemEntity.getItem().getCount()));
             }
         }
 
 
         super.stepOn(level, pos, state, entity);
+    }
+
+    private boolean isValidItem(ItemStack item) {
+        return item.is(ModTags.Items.MIDASBLOCK_ITEMS);
     }
 
     @Override
