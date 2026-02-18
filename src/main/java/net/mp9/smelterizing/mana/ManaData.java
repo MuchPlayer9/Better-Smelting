@@ -4,7 +4,6 @@ import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
 
 public record ManaData(int currentMana, int maxMana) {
-
     public static final Codec<ManaData> CODEC = RecordCodecBuilder.create(instance ->
             instance.group(
                     Codec.INT.fieldOf("currentMana").forGetter(ManaData::currentMana),
@@ -13,12 +12,18 @@ public record ManaData(int currentMana, int maxMana) {
     );
 
     public ManaData add(int amount) {
-        int newVal = Math.min(currentMana + amount, maxMana);
-        return new ManaData(newVal, maxMana);
+        return new ManaData(Math.min(currentMana + amount, maxMana), maxMana);
     }
 
-    public ManaData consume(int cost) {
-        int newVal = Math.max(currentMana - cost, 0);
-        return new ManaData(newVal, maxMana);
+    public ManaData consume(int amount) {
+        return new ManaData(Math.max(currentMana - amount, 0), maxMana);
+    }
+
+    public int currentMana() {
+        return currentMana;
+    }
+
+    public int maxMana() {
+        return maxMana;
     }
 }

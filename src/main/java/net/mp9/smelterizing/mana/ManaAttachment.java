@@ -13,8 +13,10 @@ public class ManaAttachment {
             DeferredRegister.create(NeoForgeRegistries.ATTACHMENT_TYPES, BetterSmelting.MOD_ID);
 
     public static final Supplier<AttachmentType<ManaData>> MANA =
-            ATTACHMENT_TYPES.register("mana",
-                    () -> AttachmentType.builder(() -> new ManaData(100, 100))
+            ATTACHMENT_TYPES.register("mana", () ->
+                    AttachmentType.<ManaData>builder(() -> new ManaData(100, 100))
                             .serialize(ManaData.CODEC)
-                            .build());
+                            .build()
+            );
+
 }

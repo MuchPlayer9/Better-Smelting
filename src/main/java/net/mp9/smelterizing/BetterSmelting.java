@@ -32,6 +32,12 @@ public class BetterSmelting {
         ModBlocks.register(modBus);
 
         ManaAttachment.ATTACHMENT_TYPES.register(modBus);
+
+        // System.out.println("Step 1: ManaAttachment.MANA = " + ManaAttachment.MANA);
+
+        // System.out.println("Step 2: ATTACHMENT_TYPES registered");
+
+
     }
 
     private void commonSetup(final FMLCommonSetupEvent event) {}
