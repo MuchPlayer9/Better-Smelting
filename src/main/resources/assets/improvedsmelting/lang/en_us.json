@@ -4,14 +4,14 @@
   "item.improvedsmelting.rubix_cube": "Rubix Cube",
   "item.improvedsmelting.raw_cheese": "Raw Cheese",
   "item.improvedsmelting.cheese": "Cheese",
-
-  // food
-  "item.improvedsmelting.coconut_milk": "Coconut Milk",
   "item.improvedsmelting.coconut": "Coconut",
   "item.improvedsmelting.coconut_husk": "Coconut Husk",
 
+  // food
+  "item.improvedsmelting.coconut_milk": "Coconut Milk",
+
   // usable items
-  "item.improvedsmelting.midas": "Hand of Midas",
+  "item.improvedsmelting.midas": "§6Hand of Midas§r",
 
   // blocks
   "block.improvedsmelting.cheese_ore": "Cheese Ore",
@@ -21,5 +21,11 @@
   // creative mode tabs
   "creativetab.bettersmelting.bettersmelting_blocks": "Better Smelting Blocks",
   "creativetab.bettersmelting.bettersmelting_items": "Better Smelting Items",
-  "creativetab.bettersmelting.bettersmelting_food": "Better Smelting Food"
+  "creativetab.bettersmelting.bettersmelting_food": "Better Smelting Food",
+
+  // tooltips
+  "tooltip.bettersmelting.midas_block.tooltip": "This Block can recharge the §6Hand of Midas§r",
+  "tooltip.bettersmelting.midas": "Press §eShift§r for more information",
+  "tooltip.bettersmelting.midas.shift_down": "This hand still carries Midas' curse, turning blocks it touches, into gold.",
+  "tooltip.bettersmelting.coconut.tooltip": "Sure hope this coconut didn't land on your head.."
 }
