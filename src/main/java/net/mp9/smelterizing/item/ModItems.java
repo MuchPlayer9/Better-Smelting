@@ -48,6 +48,11 @@ public class ModItems {
     public static final DeferredItem<Item> MIDAS = ITEMS.register("midas",
             () -> new MidasItem(new Item.Properties().durability(32)));
 
+    // mana items
+    public static final DeferredItem<Item> MANA_SWORD = ITEMS.register("mana_sword",
+            () -> new ManaSword());
+
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

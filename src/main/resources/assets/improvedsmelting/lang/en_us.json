@@ -18,10 +18,14 @@
   "block.improvedsmelting.australia_map": "Australia",
   "block.improvedsmelting.midas_block": "Block of Midas",
 
+  // mana things
+  "item.improvedsmelting.mana_sword": "Mana Sword",
+
   // creative mode tabs
   "creativetab.bettersmelting.bettersmelting_blocks": "Better Smelting Blocks",
   "creativetab.bettersmelting.bettersmelting_items": "Better Smelting Items",
   "creativetab.bettersmelting.bettersmelting_food": "Better Smelting Food",
+  "creativetab.bettersmelting.bettersmelting_mana": "Better Smelting Mana",
 
   // tooltips
   "tooltip.bettersmelting.midas_block.tooltip": "This Block can recharge the §6Hand of Midas§r",

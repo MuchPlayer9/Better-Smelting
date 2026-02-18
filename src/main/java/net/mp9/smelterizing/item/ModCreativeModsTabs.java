@@ -16,18 +16,20 @@ public class ModCreativeModsTabs {
     public static final DeferredRegister<CreativeModeTab> CREATIVE_MODE_TAB =
             DeferredRegister.create(Registries.CREATIVE_MODE_TAB, BetterSmelting.MOD_ID);
 
+    // Existing tabs...
     public static final Supplier<CreativeModeTab> BETTER_SMELTING_BLOCKS_TAB = CREATIVE_MODE_TAB.register("better_smelting_blocks_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModBlocks.AUSTRALIA_MAP.get()))
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModBlocks.AUSTRALIA_MAP.get()))
                     .title(Component.translatable("creativetab.bettersmelting.bettersmelting_blocks"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModBlocks.CHEESE_ORE);
                         output.accept(ModBlocks.AUSTRALIA_MAP);
                         output.accept(ModBlocks.MIDAS_BLOCK);
-
                     }).build());
 
     public static final Supplier<CreativeModeTab> BETTER_SMELTING_ITEMS_TAB = CREATIVE_MODE_TAB.register("better_smelting_items_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.RUBIX_CUBE.get()))
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.RUBIX_CUBE.get()))
                     .withTabsBefore(ResourceLocation.fromNamespaceAndPath(BetterSmelting.MOD_ID, "better_smelting_blocks_tab"))
                     .title(Component.translatable("creativetab.bettersmelting.bettersmelting_items"))
                     .displayItems((itemDisplayParameters, output) -> {
@@ -36,17 +38,28 @@ public class ModCreativeModsTabs {
                         output.accept(ModItems.CHEESE);
                         output.accept(ModItems.RAW_CHEESE);
                         output.accept(ModItems.MIDAS);
-
                     }).build());
 
     public static final Supplier<CreativeModeTab> BETTER_SMELTING_FOOD_TAB = CREATIVE_MODE_TAB.register("better_smelting_food_tab",
-            () -> CreativeModeTab.builder().icon(() -> new ItemStack(ModItems.COCONUT.get()))
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.COCONUT.get()))
                     .title(Component.translatable("creativetab.bettersmelting.bettersmelting_food"))
                     .displayItems((itemDisplayParameters, output) -> {
                         output.accept(ModItems.COCONUT);
                         output.accept(ModItems.COCONUT_MILK);
                         output.accept(ModItems.COCONUT_HUSK);
+                    }).build());
 
+    // ------------------------------
+    // 🔹 NEW: Better Smelting Mana Tab
+    public static final Supplier<CreativeModeTab> BETTER_SMELTING_MANA_TAB = CREATIVE_MODE_TAB.register("better_smelting_mana_tab",
+            () -> CreativeModeTab.builder()
+                    .icon(() -> new ItemStack(ModItems.MANA_SWORD.get())) // sword as icon
+                    .withTabsBefore(ResourceLocation.fromNamespaceAndPath(BetterSmelting.MOD_ID, "better_smelting_items_tab"))
+                    .title(Component.translatable("creativetab.bettersmelting.bettersmelting_mana"))
+                    .displayItems((itemDisplayParameters, output) -> {
+                        output.accept(ModItems.MANA_SWORD.get());
+                        // Add other mana-related items here
                     }).build());
 
     public static void register(IEventBus eventBus) {
